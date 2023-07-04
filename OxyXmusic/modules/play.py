@@ -447,7 +447,10 @@ async def play(_, message: Message):
     # Generate cover art
     requested_by = user.first_name
     await generate_cover(requested_by, title, views, duration, thumbnail)
-    file_path = await convert(youtube_dl.download(url))
+    ydl_opts = {}
+with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    info = ydl.extract_info(url, download=True)
+    file_path = ydl.prepare_filename(info)
 
     if chat_id in queues:
         position = await queues[chat_id].put(file=file_path)
