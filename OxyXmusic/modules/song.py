@@ -5,7 +5,6 @@ import os
 import time
 from random import randint
 from urllib.parse import urlparse
-from lyrics_extractor import SongLyrics
 import aiofiles
 import aiohttp
 import requests
