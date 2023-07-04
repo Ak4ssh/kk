@@ -2,7 +2,7 @@ pyrogram
 TgCrypto
 py-tgcalls
 python-dotenv
-youtube_dl
+git+https://github.com/yt-dlp/yt-dlp.git
 youtube_search_python
 requests
 aiohttp
