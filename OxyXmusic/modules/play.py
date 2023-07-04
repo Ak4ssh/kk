@@ -24,7 +24,6 @@ import youtube_dl
 from youtube_search import YoutubeSearch
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from pytgcalls import GroupCallFactory
 import aiofiles
 import aiohttp
 import ffmpeg
