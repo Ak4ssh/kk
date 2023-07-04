@@ -414,13 +414,6 @@ async def play(_, message: Message):
     user = message.from_user
     chat = message.chat
 
-    try:
-        # Check if the user is already connected to the client
-        await app.get_chat_member(chat_id, user.id)
-    except Exception:
-        await lel.edit(f"<i>{user.first_name} Userbot is not in this chat.</i>")
-        return
-
     await lel.edit("🔎 **Finding**")
 
     # Search for the video on YouTube
